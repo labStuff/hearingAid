@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">HearingAid</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="loudness_compensation">响度补偿</string>
+    <string name="howling_suppression">啸叫抑制</string>
+    <string name="noise_reduction">噪声抑制</string>
+
+    <!--LoudCom Fragment Start -->
+    <string name="open_loudness_compensation">响度补偿开启</string>
+    <string name="close_loudness_compensation">关闭响度补偿关闭</string>
+    <string name="channels_control">通道控制</string>
+    <string name="open_all_channel">全部开启</string>
+    <string name="close_all_channel">全部关闭</string>
+    <!--LoudCom Fragment End -->
+</resources>

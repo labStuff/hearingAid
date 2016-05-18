@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:background="@color/black_100">
+
+    <FrameLayout
+        android:id="@+id/frameLayout_loudness_compensation"
+        style="@style/FrameLayout_bottom_bar">
+
+        <TextView
+            android:id="@+id/textView_loudness_compensation"
+            style="@style/TextView_bottom_bar"
+            android:text="@string/loudness_compensation"/>
+    </FrameLayout>
+
+    <View
+        style="@style/View_divide_line"/>
+
+    <FrameLayout
+        android:id="@+id/frameLayout_howling_suppression"
+        style="@style/FrameLayout_bottom_bar">
+
+        <TextView
+            android:id="@+id/textView_howling_suppression"
+            style="@style/TextView_bottom_bar"
+            android:text="@string/howling_suppression"/>
+    </FrameLayout>
+
+    <View
+        style="@style/View_divide_line"/>
+
+    <FrameLayout
+        android:id="@+id/frameLayout_noise_reduction"
+        style="@style/FrameLayout_bottom_bar">
+
+        <TextView
+            android:id="@+id/textView_noise_reduction"
+            style="@style/TextView_bottom_bar"
+            android:text="@string/noise_reduction"/>
+    </FrameLayout>
+</LinearLayout>

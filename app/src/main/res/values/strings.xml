@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">HearingAid</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="loudness_compensation">LoudCom</string>
+    <string name="howling_suppression">HowlSup</string>
+    <string name="noise_reduction">NoiseRe</string>
+
+    <!--LoudCom Fragment Start -->
+    <string name="open_loudness_compensation">Loud-Com Opened</string>
+    <string name="close_loudness_compensation">Loud-Comp Closed</string>
+    <string name="channels_control">Channels Control</string>
+    <string name="open_all_channel">Open All</string>
+    <string name="close_all_channel">Close All</string>
+
+    <!--LoudCom Fragment End -->
+</resources>
