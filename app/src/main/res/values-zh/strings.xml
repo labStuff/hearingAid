@@ -8,11 +8,43 @@
     <string name="howling_suppression">啸叫抑制</string>
     <string name="noise_reduction">噪声抑制</string>
 
+    <string name="welcome_use">欢迎使用</string>
+    <string name="exit_app">退出应用</string>
+    <string name="about_us">关于我们</string>
+    <string name="close_aid">开启助听</string>
+    <string name="open_aid">关闭助听</string>
     <!--LoudCom Fragment Start -->
-    <string name="open_loudness_compensation">响度补偿开启</string>
-    <string name="close_loudness_compensation">关闭响度补偿关闭</string>
+    <string name="open_loudness_compensation">响度补偿已开启</string>
+    <string name="close_loudness_compensation">响度补偿已关闭</string>
     <string name="channels_control">通道控制</string>
     <string name="open_all_channel">全部开启</string>
     <string name="close_all_channel">全部关闭</string>
     <!--LoudCom Fragment End -->
+
+    <!--howling suppression Fragment start -->
+    <string name="howling_suppression_opened">啸叫抑制已开启</string>
+    <string name="howling_suppression_closed">啸叫抑制已关闭</string>
+    <string name="echo_suppression_opened">回声抵消已开启</string>
+    <string name="echo_suppression_closed">回声抵消已关闭</string>
+    <string name="trap_opened">陷波器已开启</string>
+    <string name="trap_closed">陷波器已关闭</string>
+    <string name="howl_energy_threshold">啸叫能量阈值</string>
+    <string name="howl_ratio_threshold">啸叫比阈值</string>
+    <string name="howl_frequency">啸叫频率</string>
+    <!--howling suppression Fragment end -->
+
+    <!-- noise suppression start-->
+    <string name="method_one">方法一</string>
+    <string name="method_two">方法二</string>
+    <string name="confirm_parameters">提交参数</string>
+    <string name="threshold_one">阈值一</string>
+    <string name="threshold_two">阈值二</string>
+    <string name="close_noise_suppression">关闭噪声抑制</string>
+    <string name="noise_suppression_closed">噪声抑制已关闭</string>
+    <string name="noise_suppression_opened">噪声抑制已开启</string>
+    <string name="power_smooth_factor">功率平滑因子</string>
+    <string name="speech_threshold">语音存在门限</string>
+    <string name="SNR_coefficient">SNR调节系数</string>
+    <string name="gain_function_smooth_factor">增益平滑因子</string>
+    <!-- noise suppression end-->
 </resources>

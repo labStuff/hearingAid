@@ -8,12 +8,45 @@
     <string name="howling_suppression">HowlSup</string>
     <string name="noise_reduction">NoiseRe</string>
 
+    <string name="welcome_use">Welcome, enjoy it!</string>
+    <string name="exit_app">Exit</string>
+    <string name="about_us">About us</string>
+    <string name="close_aid">CloseAid</string>
+    <string name="open_aid">OpenAid</string>
     <!--LoudCom Fragment Start -->
     <string name="open_loudness_compensation">Loud-Com Opened</string>
     <string name="close_loudness_compensation">Loud-Comp Closed</string>
     <string name="channels_control">Channels Control</string>
     <string name="open_all_channel">Open All</string>
     <string name="close_all_channel">Close All</string>
-
     <!--LoudCom Fragment End -->
+
+    <!--howling suppression Fragment start -->
+    <string name="howling_suppression_opened">HowlSup Opened</string>
+    <string name="howling_suppression_closed">HowlSup Closed</string>
+    <string name="echo_suppression_opened">EchoSup Opened</string>
+    <string name="echo_suppression_closed">EchoSup Closed</string>
+    <string name="trap_opened">Trap Opened</string>
+    <string name="trap_closed">Trap Closed</string>
+    <string name="howl_energy_threshold">HowlEnergyTh</string>
+    <string name="howl_ratio_threshold">HowlRatioTh</string>
+    <string name="howl_frequency">Howling Frequency:</string>
+    <!--howling suppression Fragment end -->
+
+    <!-- noise suppression start-->
+    <string name="method_one">MethodOne</string>
+    <string name="method_two">MethodTwo</string>
+    <string name="confirm_parameters">Confirm</string>
+    <string name="close_noise_suppression">CloseNoiseSup</string>
+    <string name="noise_suppression_closed">NoiseSup Closed</string>
+    <string name="noise_suppression_opened">NoiseSup Opened</string>
+    <string name="threshold_one">ThrOne</string>
+    <string name="threshold_two">ThrTwo</string>
+    <string name="power_smooth_factor">PSF</string>
+    <string name="speech_threshold">SpeechThr</string>
+    <string name="SNR_coefficient">SNRCoe</string>
+    <string name="gain_function_smooth_factor">GFSF</string>
+    <!-- noise suppression end-->
+
+
 </resources>

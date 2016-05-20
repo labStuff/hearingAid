@@ -4,7 +4,9 @@ import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
+import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.AppCompatActivity;
+import android.view.View;
 
 import com.yylx.hearingaid.R;
 import com.yylx.hearingaid.fragments.FragmentUtils;
@@ -15,6 +17,7 @@ import com.yylx.hearingaid.views.ButtonBar;
 
 public class MainActivity extends AppCompatActivity implements ButtonBar.ButtonBarClickListener {
 
+    DrawerLayout drawerLayout;
 
     ButtonBar mButtonBar;
 
@@ -35,6 +38,13 @@ public class MainActivity extends AppCompatActivity implements ButtonBar.ButtonB
     }
 
     private void initView() {
+        drawerLayout = (DrawerLayout) findViewById(R.id.drawlayout);
+        drawerLayout.setDrawerListener(new DrawerLayout.SimpleDrawerListener() {
+            @Override
+            public void onDrawerSlide(View drawerView, float slideOffset) {
+                super.onDrawerSlide(drawerView, slideOffset);
+            }
+        });
         mButtonBar = (ButtonBar) findViewById(R.id.layout_bottom);
         mButtonBar.setBtnItemClickListener(this);
 
@@ -46,17 +56,17 @@ public class MainActivity extends AppCompatActivity implements ButtonBar.ButtonB
 
     @Override
     public void loudComClicked() {
-        loudComFragment = showOrInitFragment(loudComFragment, LoudComFragment.class);
+        loudComFragment = showOrAddFragment(loudComFragment, LoudComFragment.class);
     }
 
     @Override
     public void howlSupClicked() {
-        howlSupFragment = showOrInitFragment(howlSupFragment, HowlSupFragment.class);
+        howlSupFragment = showOrAddFragment(howlSupFragment, HowlSupFragment.class);
     }
 
     @Override
     public void noiseReClicked() {
-        noiseReFragment = showOrInitFragment(noiseReFragment, NoiseReFragment.class);
+        noiseReFragment = showOrAddFragment(noiseReFragment, NoiseReFragment.class);
 
     }
 
@@ -79,7 +89,7 @@ public class MainActivity extends AppCompatActivity implements ButtonBar.ButtonB
         return transaction;
     }
 
-    private Fragment showOrInitFragment(Fragment fragment, Class<? extends Fragment> cls) {
+    private Fragment showOrAddFragment(Fragment fragment, Class<? extends Fragment> cls) {
         if (null == fragment) {
             fragment = FragmentUtils.newInstance(cls);
             if (null == fragment) {

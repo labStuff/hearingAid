@@ -6,6 +6,9 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.CompoundButton;
+import android.widget.Switch;
+import android.widget.TextView;
 
 import com.yylx.hearingaid.R;
 
@@ -36,5 +39,55 @@ public class HowlSupFragment extends Fragment {
         return inflater.inflate(R.layout.fragment_howl_suppression, container, false);
     }
 
+    TextView echoHint;
+    Switch echoSwitch;
 
+    TextView howlSupHint;
+    Switch howlSupSwitch;
+
+    TextView trapHint;
+    Switch trapSwitch;
+
+    @Override
+    public void onViewCreated(View view, Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+        echoHint = (TextView) view.findViewById(R.id.textView_switchHint_echo);
+        echoSwitch = (Switch) view.findViewById(R.id.switch_echo_suppression);
+        echoSwitch.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if (isChecked) {
+                    echoHint.setText(R.string.echo_suppression_opened);
+                } else {
+                    echoHint.setText(R.string.echo_suppression_closed);
+                }
+            }
+        });
+
+        howlSupHint = (TextView) view.findViewById(R.id.textView_switchHint_howl);
+        howlSupSwitch = (Switch) view.findViewById(R.id.switch_howling_suppression);
+        howlSupSwitch.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if (isChecked) {
+                    howlSupHint.setText(R.string.howling_suppression_opened);
+                } else {
+                    howlSupHint.setText(R.string.howling_suppression_closed);
+                }
+            }
+        });
+
+        trapHint = (TextView) view.findViewById(R.id.textView_switchHint_trap);
+        trapSwitch = (Switch) view.findViewById(R.id.switch_trap);
+        trapSwitch.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if (isChecked) {
+                    trapHint.setText(R.string.trap_opened);
+                } else {
+                    trapHint.setText(R.string.trap_closed);
+                }
+            }
+        });
+    }
 }

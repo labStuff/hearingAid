@@ -7,6 +7,9 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.CompoundButton;
+import android.widget.Switch;
+import android.widget.TextView;
 
 import com.yylx.hearingaid.R;
 import com.yylx.hearingaid.views.checkbox.CheckBox;
@@ -43,6 +46,9 @@ public class LoudComFragment extends Fragment implements OnClickListener {
     Button btnOpenAll;
     Button btnCloseAll;
 
+    TextView loudComHint;
+    Switch loudComSwitch;
+
     @Override
     public void onViewCreated(View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
@@ -67,6 +73,19 @@ public class LoudComFragment extends Fragment implements OnClickListener {
         btnOpenAll.setOnClickListener(this);
         btnCloseAll = (Button) view.findViewById(R.id.button_close_all);
         btnCloseAll.setOnClickListener(this);
+
+        loudComHint = (TextView) view.findViewById(R.id.textView_switchHint);
+        loudComSwitch = (Switch) view.findViewById(R.id.switch_loudness_compensation);
+        loudComSwitch.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if (isChecked) {
+                    loudComHint.setText(R.string.open_loudness_compensation);
+                } else {
+                    loudComHint.setText(R.string.close_loudness_compensation);
+                }
+            }
+        });
     }
 
     @Override

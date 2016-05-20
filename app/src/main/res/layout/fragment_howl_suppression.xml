@@ -1,13 +1,148 @@
-<FrameLayout
+<LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingLeft="15dp"
+    android:paddingRight="15dp"
     tools:context="com.yylx.hearingaid.fragments.HowlSupFragment">
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/howling_suppression"/>
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="64dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="25dp">
 
-</FrameLayout>
+        <TextView
+            android:id="@+id/textView_switchHint_echo"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="@string/echo_suppression_closed"
+            android:textColor="@color/black_700"
+            android:textSize="@dimen/text_size_large"/>
+
+        <Switch
+            android:id="@+id/switch_echo_suppression"
+            android:layout_width="64dp"
+            android:layout_height="match_parent"
+            android:layout_toRightOf="@id/textView_switchHint_echo"/>
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="15dp"
+        android:background="@color/material_blue_grey_950"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true">
+            <TextView
+                android:id="@+id/textView_switchHint_howl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/howling_suppression_closed"
+                android:textColor="@color/black_700"
+                android:textSize="@dimen/text_size_large"/>
+
+            <Switch
+                android:id="@+id/switch_howling_suppression"
+                android:layout_width="64dp"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/textView_switchHint_howl"/>
+        </LinearLayout>
+
+
+
+        <TextView
+            android:id="@+id/textView_howl_energy_threshold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="55dp"
+            android:text="@string/howl_energy_threshold"
+            android:textSize="@dimen/text_size_medium"
+            android:layout_marginLeft="48dp"/>
+
+        <EditText
+            android:id="@+id/editText_howl_energy_threshold"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@id/textView_howl_energy_threshold"
+            android:layout_toRightOf="@id/textView_howl_energy_threshold"
+            android:hint="0.001"
+            android:inputType="numberDecimal"/>
+
+        <TextView
+            android:id="@+id/textView_howl_ratio_threshold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textView_howl_energy_threshold"
+            android:text="@string/howl_ratio_threshold"
+            android:textSize="@dimen/text_size_medium"
+            android:layout_marginTop="25dp"
+            android:layout_marginLeft="48dp"/>
+
+        <EditText
+            android:id="@+id/editText_howl_ratio_threshold"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@id/textView_howl_ratio_threshold"
+            android:layout_alignLeft="@id/editText_howl_energy_threshold"
+            android:hint="10"
+            android:inputType="numberDecimal"/>
+
+        <TextView
+            android:id="@+id/textView_howl_frequencyHint"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textView_howl_ratio_threshold"
+            android:layout_marginTop="25dp"
+            android:text="@string/howl_frequency"
+            android:textSize="@dimen/text_size_medium"
+            android:layout_marginLeft="48dp"/>
+
+        <TextView
+            android:id="@+id/textView_howl_frequency"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@id/textView_howl_frequencyHint"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/textView_howl_frequencyHint"
+            android:text="100Hz"/>
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="15dp"
+        android:background="@color/material_blue_grey_950"/>
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="64dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="25dp">
+
+        <TextView
+            android:id="@+id/textView_switchHint_trap"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="@string/trap_closed"
+            android:textColor="@color/black_700"
+            android:textSize="@dimen/text_size_large"/>
+
+        <Switch
+            android:id="@+id/switch_trap"
+            android:layout_width="64dp"
+            android:layout_height="match_parent"
+            android:layout_toRightOf="@id/textView_switchHint_trap"/>
+    </RelativeLayout>
+</LinearLayout>

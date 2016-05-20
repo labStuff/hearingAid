@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:id="@+id/rootView"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:widget="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black_100"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/layout_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/black_900"
+        android:padding="16dp">
+
+        <ImageView
+            android:id="@+id/imageview_account"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_user">
+        </ImageView>
+
+        <TextView
+            android:id="@+id/textview_username"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="18dp"
+            android:layout_toRightOf="@id/imageview_account"
+            android:text="@string/welcome_use"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_large"/>
+
+        <TextView
+            android:id="@+id/textview_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/textview_username"
+            android:layout_marginBottom="2dp"
+            android:layout_toRightOf="@id/textview_username"
+            android:paddingLeft="8dp"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_medium"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.yylx.hearingaid.views.buttonflat.ButtonFlat
+            android:id="@+id/button_exitaccount"
+            style="@style/common_drawer_button"
+            widget:rippleColor="@color/black_400"
+            widget:rippleSpeed="36">
+
+            <ImageView
+                android:id="@+id/imageview_exit"
+                style="@style/common_drawer_imageview"
+                android:src="@drawable/ic_exit_to_app_grey600_24dp"/>
+
+            <TextView
+                style="@style/common_drawer_textview"
+                android:layout_toRightOf="@id/imageview_exit"
+                android:text="@string/exit_app"/>
+        </com.yylx.hearingaid.views.buttonflat.ButtonFlat>
+
+
+        <com.yylx.hearingaid.views.buttonflat.ButtonFlat
+            android:id="@+id/button_aboutus"
+            style="@style/common_drawer_button"
+            android:layout_below="@id/button_exitaccount"
+            android:layout_marginBottom="8dp"
+            widget:rippleColor="@color/black_400"
+            widget:rippleSpeed="36">
+
+            <ImageView
+                android:id="@+id/imageview_aboutus"
+                style="@style/common_drawer_imageview"
+                android:src="@drawable/ic_tag_faces_grey600_24dp"/>
+
+            <TextView
+                style="@style/common_drawer_textview"
+                android:layout_toRightOf="@id/imageview_aboutus"
+                android:text="@string/about_us"/>
+        </com.yylx.hearingaid.views.buttonflat.ButtonFlat>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RadioGroup
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:orientation="vertical">
+
+            <RadioButton
+                android:id="@+id/radioButton_close_noise_sup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/open_aid"/>
+
+            <RadioButton
+                android:id="@+id/radioButton_method1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:checked="true"
+                android:text="@string/close_aid"/>
+        </RadioGroup>
+    </RelativeLayout>
+
+
+</LinearLayout>
